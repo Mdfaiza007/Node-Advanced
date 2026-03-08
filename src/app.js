@@ -43,6 +43,17 @@ app.use(cookieParser())
 // Incoming request ki cookies ko parse karega
 // req.cookies object available karata hai (JWT auth me useful)
 
+
+// routes import
+
+import userRouter from "./routes/user.routes.js"
+
+// routes declaration
+
+app.use("/api/v1/users",userRouter)
+
+// http://localhost:8000/api/v1/users/register
+
 export { app }
 // App ko export kar rahe hain taaki server file me import karke listen kara sake
 // Best practice: app configuration aur server start alag files me rakhte hain
